@@ -16,23 +16,31 @@ class GameOverScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-                'Score: ${game.bird.score}',
-                style: const TextStyle(
-                  fontSize: 60,
-                  color: Colors.white,
-                  fontFamily: 'Game',
-                ),
-              ),
-              const SizedBox(height: 20),
             Image.asset(Assets.gameOver),
+            const SizedBox(height: 20),
+            Text(
+              'Score: ${game.bird.score}',
+              style: const TextStyle(
+                fontSize: 60,
+                color: Colors.white,
+                fontFamily: 'Game',
+              ),
+            ),
+            Text(
+              'High Score: ${game.highest}', // Display highest score
+              style: const TextStyle(
+                fontSize: 40,
+                color: Colors.white,
+                fontFamily: 'Game',
+              ),
+            ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: onRestart,
               style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
               child: const Text(
                 'Restart',
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 40, fontFamily: 'game'),
               ),
             ),
           ],

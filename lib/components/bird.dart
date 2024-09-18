@@ -52,6 +52,7 @@ class Bird extends SpriteGroupComponent<BirdMovement>
 
   void gameOver() {
     FlameAudio.play(Assets.collision);
+    gameRef.updateHighestScore(); // Update the highest score on game over
     gameRef.overlays.add('gameOver');
     gameRef.pauseEngine();
     game.isHit = true;
