@@ -1,31 +1,41 @@
-import 'dart:async';
 import 'package:bird_escape/components/background.dart';
 import 'package:bird_escape/components/bird.dart';
 import 'package:bird_escape/components/ground.dart';
 import 'package:bird_escape/components/pipe_group.dart';
 import 'package:bird_escape/game/configuration.dart';
+import 'package:flame/components.dart';
+import 'package:flame/events.dart';
 import 'package:flame/game.dart';
-import 'package:flame/input.dart';
+
+import 'package:flutter/painting.dart';
 
 class BirdEscapeGame extends FlameGame with TapDetector, HasCollisionDetection {
-  late Bird bird;
-  Timer? pipeSpawnTimer;  // Define the Dart Timer
-  bool isHit = false;
+  BirdEscapeGame();
 
+  late Bird bird;
+  Timer interval = Timer(Config.pipeInterval, repeat: true);
+  bool isHit = false;
+  late TextComponent score;
   @override
-  FutureOr<void> onLoad() async {
+  Future<void> onLoad() async {
     addAll([
       Background(),
       Ground(),
       bird = Bird(),
+      score = buildScore(),
     ]);
 
-    pipeSpawnTimer = Timer.periodic(
-      Duration(milliseconds: 1500),  // Define the interval
-      (timer) {
-        add(PipeGroup());
-      },
-    );
+    interval.onTick = () => add(PipeGroup());
+  }
+
+  TextComponent buildScore() {
+    return TextComponent(
+        position: Vector2(size.x / 2, size.y / 2 * 0.2),
+        anchor: Anchor.center,
+        textRenderer: TextPaint(
+          style: const TextStyle(
+              fontSize: 40, fontFamily: 'Game', fontWeight: FontWeight.bold),
+        ));
   }
 
   @override
@@ -36,34 +46,7 @@ class BirdEscapeGame extends FlameGame with TapDetector, HasCollisionDetection {
   @override
   void update(double dt) {
     super.update(dt);
-
-    if (isHit) {
-      removePipes();
-      isHit = false;
-    }
-  }
-
-  void removePipes() {
-    // Remove only the pipes
-    children.where((c) => c is PipeGroup).forEach((component) {
-      component.removeFromParent();
-    });
-  }
-
-  void restartGame() {
-    // Reset the bird's position
-    bird.reset();
-
-    // Remove only the pipes
-    removePipes();
-
-    // Restart the pipe spawn timer
-    pipeSpawnTimer?.cancel();
-    pipeSpawnTimer = Timer.periodic(
-      Duration(milliseconds: 1500),
-      (timer) {
-        add(PipeGroup());
-      },
-    );
+    interval.update(dt);
+    score.text = 'Score: ${bird.score}';
   }
 }

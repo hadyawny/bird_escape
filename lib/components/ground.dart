@@ -1,4 +1,3 @@
-import 'dart:async';
 
 import 'package:bird_escape/game/assets.dart';
 import 'package:bird_escape/game/bird_escape_game.dart';
@@ -10,7 +9,7 @@ import 'package:flame/parallax.dart';
 
 class Ground extends ParallaxComponent<BirdEscapeGame> with HasGameRef<BirdEscapeGame>{
   @override
-  FutureOr<void> onLoad() async {
+  Future<void> onLoad() async {
     final ground = await Flame.images.load(Assets.ground);
     parallax =
         Parallax([ParallaxLayer(ParallaxImage(ground, fill: LayerFill.none))]);
