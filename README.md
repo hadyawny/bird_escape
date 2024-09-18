@@ -1,16 +1,23 @@
-# bird_escape
+# Escape Birdie
 
-A new Flutter project.
+## About
 
-## Getting Started
+**Escape Birdie** is an exciting and addictive mobile game where players guide a brave bird through challenging obstacles. Developed using **Flutter** and **Flame**, this game offers smooth performance, vibrant graphics, and intuitive controls, ensuring endless fun and a chance to beat high scores.
 
-This project is a starting point for a Flutter application.
+### Features
+- **Simple and Intuitive Controls**: Tap to flap and navigate through obstacles.
+- **Challenging Gameplay**: Increasing difficulty with each level.
+- **Stunning Graphics**: Eye-catching visuals and animations.
+- **Score Tracking**: Compete for the highest scores and improve your skills.
 
-A few resources to get you started if this is your first Flutter project:
+### Technologies Used
+- **Flutter**: A powerful UI toolkit for building natively compiled applications for mobile from a single codebase.
+- **Flame**: A lightweight game engine for Flutter that provides a set of tools to build 2D games.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+To install and run the game locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/escape-birdie.git
