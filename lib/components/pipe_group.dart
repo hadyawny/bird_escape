@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:bird_escape/components/pipe.dart';
-import 'package:bird_escape/game/assets.dart';
-import 'package:bird_escape/game/bird_escape_game.dart';
-import 'package:bird_escape/game/configuration.dart';
-import 'package:bird_escape/game/pipe_position.dart';
+import 'package:escape_birdie/components/pipe.dart';
+import 'package:escape_birdie/game/assets.dart';
+import 'package:escape_birdie/game/bird_escape_game.dart';
+import 'package:escape_birdie/game/configuration.dart';
+import 'package:escape_birdie/game/pipe_position.dart';
 import 'package:flame/components.dart';
 import 'package:flame_audio/flame_audio.dart';
 

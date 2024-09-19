@@ -1,9 +1,9 @@
-import 'package:bird_escape/components/background.dart';
-import 'package:bird_escape/components/bird.dart';
-import 'package:bird_escape/components/ground.dart';
-import 'package:bird_escape/components/pipe_group.dart';
-import 'package:bird_escape/game/configuration.dart';
-import 'package:bird_escape/game/scoreManager.dart';
+import 'package:escape_birdie/components/background.dart';
+import 'package:escape_birdie/components/bird.dart';
+import 'package:escape_birdie/components/ground.dart';
+import 'package:escape_birdie/components/pipe_group.dart';
+import 'package:escape_birdie/game/configuration.dart';
+import 'package:escape_birdie/game/scoreManager.dart';
 import 'package:flame/components.dart';
 import 'package:flame/events.dart';
 import 'package:flame/game.dart';

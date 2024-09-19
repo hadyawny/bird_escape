@@ -1,7 +1,7 @@
-import 'package:bird_escape/game/assets.dart';
-import 'package:bird_escape/game/bird_escape_game.dart';
-import 'package:bird_escape/game/bird_movement.dart';
-import 'package:bird_escape/game/configuration.dart';
+import 'package:escape_birdie/game/assets.dart';
+import 'package:escape_birdie/game/bird_escape_game.dart';
+import 'package:escape_birdie/game/bird_movement.dart';
+import 'package:escape_birdie/game/configuration.dart';
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flame/effects.dart';
