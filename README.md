@@ -39,14 +39,19 @@ To install and run the game locally:
    flutter run
 
 
+
+
+### Download APK
+
+You can download and install the APK directly from [this link](https://drive.google.com/file/d/10wO7LtGr5wi0_G1Qp3TyaP7gkru-OMwL/view?usp=drive_link).
+
+
 ### Screenshots
 
 <img src="https://github.com/user-attachments/assets/14e08774-bc52-4b1f-bfd1-f79ccf9e7bca" alt="EscapeBirdie" width="300"/>
 
 
 https://github.com/user-attachments/assets/caf6ff65-eb0a-43b1-b737-1138c11a0296
-
-
 
 
 ### Contributing
