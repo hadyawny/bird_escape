@@ -1,4 +1,4 @@
-package com.example.bird_escape
+package com.hady.escapebirdie
 
 import io.flutter.embedding.android.FlutterActivity
 
