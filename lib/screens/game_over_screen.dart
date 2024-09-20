@@ -43,6 +43,19 @@ class GameOverScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 40, fontFamily: 'game'),
               ),
             ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                game.overlays.remove('gameOver');
+
+                game.overlays.add('score');
+              },
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
+              child: const Text(
+                'View Top Scores',
+                style: TextStyle(fontSize: 40, fontFamily: 'game'),
+              ),
+            ),
           ],
         ),
       ),
