@@ -24,7 +24,51 @@ class ScoreScreen extends StatelessWidget {
                   color: Colors.orange,
                 );
               } else if (snapshot.hasError) {
-                return Text('Error: ${snapshot.error}');
+                String errorMessage = snapshot.error.toString();
+
+                // Custom error message for no internet connection
+                if (errorMessage.contains('No Internet connection')) {
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(Icons.wifi_off,
+                          size: 100, color: Colors.orange),
+                      const SizedBox(height: 20),
+                      const Text(
+                        'No Internet connection',
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: Colors.orange,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      ElevatedButton(
+                        onPressed: () {
+                          onRestart();
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orangeAccent,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 40, vertical: 20),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
+                        ),
+                        child: const Text(
+                          'Play Again',
+                          style: TextStyle(
+                            fontSize: 35,
+                            fontFamily: 'Game',
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                }
+
+                return Text('Error: $errorMessage');
               } else if (snapshot.hasData) {
                 final scores = snapshot.data!;
                 return Column(
