@@ -17,9 +17,7 @@ void main() {
       'gameOver': (context, _) => GameOverScreen(game: game),
       'score': (context, _) => ScoreScreen(game: game),
       'newTopScore': (context, _) => NewTopScoreScreen(
-            game: game,
-            playerScore: game.highest,
-          ),
+            game: game,          ),
     },
   ));
 }
