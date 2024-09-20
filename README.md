@@ -40,7 +40,7 @@ To install and run the game locally:
 
 ### Download APK
 
-You can download and install the APK directly from [this link](https://drive.google.com/file/d/10wO7LtGr5wi0_G1Qp3TyaP7gkru-OMwL/view?usp=drive_link).
+You can download and install the APK directly from [this link](https://drive.google.com/file/d/1hPdjQE18fYVm2D3TljWuq9eiNjmcVH_d/view?usp=drive_link).
 
 
 ### Screenshots
